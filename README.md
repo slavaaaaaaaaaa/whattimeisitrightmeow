@@ -2,6 +2,8 @@
 
 You know you want to find out.
 
+I mean, who needs ntp when you have this?
+
 ## Usage
 
 Fork me, eat me, put me in a tree

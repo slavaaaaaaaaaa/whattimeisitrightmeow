@@ -12,6 +12,8 @@ I woke up one morning after seeing the traeish of Bojack Horseman and thought: "
 
 Behold.
 
+The best part is that due to the nature of github pages, the time doesn't get updated fast enough anyway. This whole thing is a lie!
+
 ## License
 
 MIT [license](LICENSE) it is.

@@ -2,6 +2,14 @@
 
 You know you want to find out.
 
+## Usage
+
+Fork me, eat me, put me in a tree
+
+Then run `./bin/build.sh` forever
+
+Then watch your own personalized time!
+
 ## Contributing
 
 Only if you really want to.

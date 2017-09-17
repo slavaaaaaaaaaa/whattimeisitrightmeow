@@ -3,9 +3,8 @@
 set -e
 
 while true; do
-    date +"%H %M" > time.txt
-    cat time.txt
-    git add time.txt
+    sed -i 's&<p can i put a marker here?.*$&<p can i put a marker here?>'"$(date +"%H %M")"'</p>&' index.html
+    git add index.html
     git commit -m "Can't you see I'm updating the time?"
     git pull upstream master --rebase
     git push origin master

@@ -2,6 +2,10 @@
 
 set -e
 
+git config user.name time
+git config user.email time@allweretaken.xyz
+git config commit.gpgsign false
+
 while true; do
     sed -i 's&<p can i put a marker here?.*$&<p can i put a marker here?>'"$(date +"%H %M")"'</p>&' index.html
     git add index.html

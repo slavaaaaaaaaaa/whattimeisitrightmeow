@@ -8,5 +8,5 @@ while true; do
     git commit -m "Can't you see I'm updating the time?"
     git pull --rebase origin master
     git push origin master
-    sleep 60
+    sleep $((60 - $(date +%S)))
 done

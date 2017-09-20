@@ -12,10 +12,9 @@ fi
 
 while true; do
     date=$(date +"%H %M")
-    sed -i 's&<p can i put a marker here?.*$&<p can i put a marker here?>'$date'</p>&' index.html
+    sed -i 's&<p can i put a marker here?.*$&<p can i put a marker here?>'"$date"'</p>&' index.html
     echo $date > time.txt
-    git add index.html
-    git add time.txt
+    git add index.html time.txt
     git commit -m "Can't you see I'm updating the time?"
     if ! [ -e lock ]; then
         (touch lock; \

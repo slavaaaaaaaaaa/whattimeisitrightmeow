@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 git config user.name time
 git config user.email time@allweretaken.xyz

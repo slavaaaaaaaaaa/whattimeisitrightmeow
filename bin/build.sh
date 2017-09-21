@@ -18,8 +18,8 @@ while true; do
     git commit -m "Can't you see I'm updating the time?"
     if ! [ -e lock ]; then
         (touch lock; \
-         git pull --rebase origin master; \
-         git push origin master; \
+         git pull --rebase origin master || rm lock; \
+         git push origin master || rm lock; \
          rm lock)&
     fi
     sleep $((60 - $(date +%-S)))

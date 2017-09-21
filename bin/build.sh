@@ -11,7 +11,7 @@ if [ -e lock ]; then
 fi
 
 while true; do
-    date=$(date +"%H %M")
+    date=$(date +"%H %M %Z")
     sed -i 's&<p can i put a marker here?.*$&<p can i put a marker here?>'"$date"'</p>&' index.html
     echo $date > time.txt
     git add index.html time.txt

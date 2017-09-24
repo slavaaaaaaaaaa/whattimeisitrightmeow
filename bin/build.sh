@@ -17,10 +17,15 @@ while true; do
     git add index.html time.txt
     git commit -m "Can't you see I'm updating the time?"
     if ! [ -e lock ]; then
-        (touch lock; \
-         git pull --rebase origin master || rm lock; \
-         git push origin master || rm lock; \
-         rm lock)&
+        ( touch lock; \
+	cmdpid=$BASHPID; \
+	(sleep 10; kill $cmdpid) & \
+	    (
+            git pull --rebase origin master || rm lock; \
+            git push origin master || rm lock; \
+            );
+        rm lock; \
+	)&
     fi
     sleep $((60 - $(date +%-S)))
 done

@@ -19,12 +19,11 @@ while true; do
     if ! [ -e lock ]; then
         ( touch lock; \
 	cmdpid=$BASHPID; \
-	(sleep 10; kill $cmdpid) & \
+	(sleep 10; kill $cmdpid && rm lock || rm lock) & \
 	    (
-            git pull --rebase origin master || rm lock; \
-            git push origin master || rm lock; \
+            git pull --rebase origin master; \
+            git push origin master; \
             );
-        rm lock; \
 	)&
     fi
     sleep $((60 - $(date +%-S)))

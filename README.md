@@ -12,6 +12,10 @@ Run `./bin/build.sh` forever
 
 Watch your own personalized time!
 
+## Do I use this?
+
+Hell yes I do, [in prod](https://github.com/naftulikay/ansible-role-time/pull/7). Someone tell him to merge it already!
+
 ## Contributing
 
 Only if you really want to.

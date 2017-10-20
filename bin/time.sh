@@ -19,7 +19,7 @@ while true; do
     if ! [ -e lock ]; then
         ( touch lock; \
 	cmdpid=$BASHPID; \
-	(sleep 10; kill $cmdpid && rm lock || rm lock) & \
+	(sleep 30; kill $cmdpid && rm lock || rm lock) & \
 	    (
             git pull --rebase origin master; \
             git push origin master; \

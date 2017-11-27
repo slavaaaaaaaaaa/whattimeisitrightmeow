@@ -8,7 +8,7 @@ Who needs ntp when you have this?
 
 Fork me, eat me, put me in a tree
 
-Run `./bin/build.sh` forever
+Run `./bin/time.sh` forever
 
 Watch your own personalized time!
 

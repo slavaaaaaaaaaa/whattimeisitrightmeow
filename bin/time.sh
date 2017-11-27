@@ -12,7 +12,9 @@ fi
 
 while true; do
     date=$(date +"%H %M %Z")
-    sed -i 's&<p can i put a marker here?.*$&<p can i put a marker here?>'"$date"'</p>&' index.html
+    commits=$(git shortlog | grep -E '^[^ ]' | grep time | sed -e 's/^.*(//g' -e 's/).*//g')
+    sed -i'traaash' -e 's&<p can i put a marker here?.*$&<p can i put a marker here?>'"$date"'</p>&' index.html
+    sed -i'traaash' -e 's&<p can i put another marker here?.*$&<p can i put another marker here?>'"$commits"' minutes committed</p>&' index.html
     echo $date > time.txt
     git add index.html time.txt
     git commit -m "Can't you see I'm updating the time?"

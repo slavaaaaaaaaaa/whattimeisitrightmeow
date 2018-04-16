@@ -4,6 +4,10 @@ You know you want to find out.
 
 Who needs ntp when you have this?
 
+## Status
+
+Dead. GitHub started noticeably lagging on the repo page, and even my slowpoke of a VPS started to struggle pushing the changes in less than thirty seconds. A solution is to bump my sleep limit, but more importantly, [GitHub itself is mad](github_letter.png). It was a good run!
+
 ## Usage
 
 Fork me, eat me, put me in a tree
